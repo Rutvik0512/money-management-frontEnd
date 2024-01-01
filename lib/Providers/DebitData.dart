@@ -8,7 +8,7 @@ class DebitData with ChangeNotifier{
 
   final String token;
   final String userId;
-  final String baseUrl = 'https://money-management-production.up.railway.app/api/debit';
+  final String baseUrl = 'http://10.0.2.2:9090/api/debit';
   //10.0.2.2:9090
 
 

@@ -69,7 +69,10 @@ class _HomeScreenState extends State<HomeScreen> {
               height: media.size.height/3,
               child: ListView.separated(
                 itemCount: creditData.data.length,
-                itemBuilder: (context, index) {
+                separatorBuilder: (bctx, _) {
+                    return const Divider();
+                  },
+                itemBuilder: (context, index){
                   return InkWell(
                       child: CreditWidget(creditData.data[index]),
                        onTap: () async {
@@ -78,12 +81,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         DisplayWithMap(credit: creditData.data[index]),
                           ),);
                         if(res) updateCredit(creditData.data[index]);
-                       },
-                       //
+                       },//
                   );
-                },
-                separatorBuilder: (bctx, _) {
-                  return const Divider();
                 },
               ),
             ),

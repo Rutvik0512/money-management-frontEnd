@@ -12,8 +12,7 @@ class Authentication with ChangeNotifier{
   String _userId= '';
   DateTime? _expirationTime = DateTime.now();
   Timer? _authTime;
-  final String baseUrl = 'https://money-management-production.up.railway.app/api/v1/auth';
-  //money-management-production.up.railway.app
+  final String baseUrl = 'http://10.0.2.2:9090/api/v1/auth';
 
   String get authToken{
 

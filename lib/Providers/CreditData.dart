@@ -8,7 +8,7 @@ class CreditData with ChangeNotifier{
 
   final String token;
   final String userId;
-  final String creditsEndpoint = 'https://money-management-production.up.railway.app/api/credits';
+  final String creditsEndpoint = 'http://10.0.2.2:9090/api/credits';
 
   List<Credit> _credits = [];
   List<Credit> _analysisData = [];
